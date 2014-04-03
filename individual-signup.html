@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<title>State College Bar Tour</title>
+		
 		<!--File Imports-->
 		<link rel="stylesheet" href="css/custom.css" />
 		<link rel="stylesheet" href="css/bartour.css" />
@@ -35,7 +36,7 @@
 			<!--End of Page Title-->
 			<!--Menu Options-->
 			<form action="individual_form.asp">
-				Username/Email: <input type="text" name="username"><br>
+				Email: <input type="text" name="username"><br>
 				Password: <input type="password" name="password"><br>
 				Confirm Password: <input type="password" name="password2"><br>
 				First Name: <input type="text" name="fname"><br>
@@ -151,10 +152,31 @@
 
 
 				<br><br>
-				<input type="submit" value="Submit">
+				<input type="submit" value="submit">
+
+				<script>
+				  $(function () {
+					$('form').on('submit', function (e) {
+					  $.ajax({
+						type: 'post',
+						url: 'php/individual-signup.php',
+						data: $('form').serialize(),
+						success: function () {
+						  alert('form was submitted');
+						  window.location.href = "index.html";						  
+						}
+					  });
+					  e.preventDefault();
+					});
+				  });
+				</script>
 			</form>
 			<!--End of Menu Options-->
 		</div>
+
+		<!-- PHP function shit -->
+		
+		<!-- End PHP shit -->
 	</body>
 </html>
 	
