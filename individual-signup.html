@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>State College Bar Tour</title>
+		<!--File Imports-->
+		<link rel="stylesheet" href="css/custom.css" />
+		<link rel="stylesheet" href="css/bartour.css" />
+		<link rel="stylesheet" href="css/jquery.mobile-1.3.2.css"/>
+		
+		<script type="text/javascript" src="js/jquery-2.0.3.js"></script>
+		<script type="text/javascript" src="js/jquery.mobile-1.3.2.js"></script>
+		<script type="text/javascript" src="js/jquery.json-2.4.min.js"></script>
+		<script type="text/javascript" src="js/jstorage.min.js"></script>
+		<script type="text/javascript" src="js/globals.js"></script>
+		<!--End of File Imports-->
+	</head>
+	<body>	
+		<div id="page_home" class="page" data-role="page">
+			<!--Header Section-->
+			<div id="header" data-role="header" data-theme="a">
+				<div id="header_logo">
+				<a href="signup.html" data-ajax="false" data-prefetch
+						data-role="button" id="homebtn" class="home_button">Back</a>
+				</div>
+				<div id="header_home">
+					<a href="index.html" data-ajax="false" data-prefetch
+						data-role="button" id="homebtn" class="home_button">Home</a>
+				</div>				
+			</div>		
+			<!-- End of Header Section -->
+			<!--Page Title-->
+			<div id="headerFill" class="dynamic_text">
+				<h2	class="header_text">Individual Sign Up</h2>
+			</div>
+			<!--End of Page Title-->
+			<!--Menu Options-->
+			<form action="individual_form.asp">
+				Username/Email: <input type="text" name="username"><br>
+				Password: <input type="password" name="password"><br>
+				Confirm Password: <input type="password" name="password2"><br>
+				First Name: <input type="text" name="fname"><br>
+				Last Name: <input type="text" name="lname"><br>
+				Age: <input type="text" name="cc_no"><br>
+
+				Gender: <select>
+					<option value="1">Male</option>
+					<option value="0">Female</option>
+					</select>
+				Phone Number: <input type="text" name="phone"><br>
+				Address 1: <input type="text" name="addr_2"><br>
+				Address 2: <input type="text" name="addr_1"><br>
+				City: <input type="text" name="city"><br>
+				ZIP: <input type="text" name="zip"><br>
+				State: <select> 
+					<option value="AL">AL</option>
+					<option value="AK">AK</option>
+					<option value="AZ">AZ</option>
+					<option value="AR">AR</option>
+					<option value="CA">CA</option>
+					<option value="CO">CO</option>
+					<option value="CT">CT</option>
+					<option value="DE">DE</option>
+					<option value="FL">FL</option>
+					<option value="GA">GA</option>
+					<option value="HI">HI</option>
+					<option value="ID">ID</option>
+					<option value="IL">IL</option>
+					<option value="IN">IN</option>
+					<option value="IA">IA</option>
+					<option value="KS">KS</option>
+					<option value="KY">KY</option>
+					<option value="LA">LA</option>
+					<option value="ME">ME</option>
+					<option value="MD">MD</option>
+					<option value="MI">MI</option>
+					<option value="MN">MN</option>
+					<option value="MS">MS</option>
+					<option value="MT">MT</option>
+					<option value="NE">NE</option>
+					<option value="NV">NV</option>
+					<option value="NH">NH</option>
+					<option value="NJ">NJ</option>
+					<option value="NM">NM</option>
+					<option value="NY">NY</option>
+					<option value="NC">NC</option>
+					<option value="ND">ND</option>
+					<option value="OH">OH</option>
+					<option value="OR">OR</option>
+					<option value="PA">PA</option>
+					<option value="RI">RI</option>
+					<option value="SC">SC</option>
+					<option value="SD">SD</option>
+					<option value="TN">TN</option>
+					<option value="TX">TX</option>
+					<option value="UT">UT</option>
+					<option value="VT">VT</option>
+					<option value="VA">VA</option>
+					<option value="WA">WA</option>
+					<option value="WV">WV</option>
+					<option value="WI">WI</option>
+					<option value="WY">WY</option>
+					<option value="DC">DC</option>
+				</select>
+				Credit Card Number: <input type="text" name="cc_no"><br>
+				Credit Card Type: <select> 
+					<option value="american_express">American Express</option>
+					<option value="discover">Discover</option>
+					<option value="master_card">Master Card</option>
+					<option value="visa">Visa</option>
+				</select>
+
+				Expiration Date: <select> 
+					<option value="1">01</option>
+					<option value="2">02</option>
+					<option value="3">03</option>
+					<option value="4">04</option>
+					<option value="5">05</option>
+					<option value="6">06</option>
+					<option value="7">07</option>
+					<option value="8">08</option>
+					<option value="9">09</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					</select> 
+
+					<select> 
+					<option value="14">2014</option>
+					<option value="15">2015</option>
+					<option value="16">2016</option>
+					<option value="17">2017</option>
+					<option value="18">2018</option>
+					<option value="19">2019</option>
+					<option value="20">2020</option>
+					<option value="21">2021</option>
+					<option value="22">2022</option>
+					<option value="23">2023</option>
+					<option value="24">2024</option>
+					<option value="25">2025</option>
+					</select> 
+
+				Security Number: <input type="text" name="cc_no"><br>
+
+				Income: <select> 
+					<option value="Lower">$0 - $25,000</option>
+					<option value="Lower_Middle">$25,000 - $50,000</option>
+					<option value="Middle">$50,000 - $75,000</option>
+					<option value="Middle_Upper">$75,000 - $100,000</option>
+					<option value="Upper">$100,000+</option>
+					</select> 
+
+
+				<br><br>
+				<input type="submit" value="Submit">
+			</form>
+			<!--End of Menu Options-->
+		</div>
+	</body>
+</html>
+	

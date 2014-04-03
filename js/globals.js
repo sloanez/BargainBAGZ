@@ -1,0 +1,15 @@
+SCLAT = 40.7914;
+SCLONG = -77.8586;
+START_ZOOM = 15;
+
+INITIAL_ENTRY = 1;
+ROW_INDEX = 1;
+ZERO = 0;
+
+CONSUMER_KEY = "piF9qWWCZUApFeuEDG7bLA";
+CONSUMER_SECRET = "dCojNZyl2r_03sqS7C3fgf7Ns4s";
+ACCESS_TOKEN = "92NeUImWU8sUgkkVEqWcPBch9jqy7efp";
+ACCESS_TOKEN_SECRET = "zgrMpQPG3nNIxdz36AejIDJs_Oc";
+SIGNATURE_METHOD = "HMAC-SHA1";
+YELP_CALL = 'http://api.yelp.com/v2/business/'; 
+YELP_LINK = "http://m.yelp.com/biz/";

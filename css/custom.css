@@ -1,0 +1,217 @@
+/*CUSTOM STLYES*/
+@media screen {
+	#headerFill {
+		height: 170px;
+		width: 100%;
+		margin-bottom: 10px;
+		background: url(../images/snowstate.jpg) no-repeat left;
+		background-size:100%;
+	}
+	.ui-btn-inner {
+		padding: 17px
+	}
+	.dynamic_text {
+		font-size: 180%;
+		font-family: arial;
+		text-shadow: none;
+	}
+	.dynamic .ui-btn-text {
+		font-size: 175%;
+	}
+	.bottle_button
+	{
+		height: 25%;
+	}
+	.home_button
+	{
+		height: 50px !important;
+		line-height: 27px !important;
+		align: center !important;
+		width: 150px !important;
+		font-size: 20pt !important;
+	}
+}
+
+@media screen and (max-device-width: 900px) {
+	#headerFill {
+		height: 170px;
+		width: 100%;
+		margin-bottom: 10px;
+		background: url(../images/snowstate.jpg) no-repeat left;
+		background-size:100%;
+	}
+	.ui-btn-inner {
+		padding: 17px
+	}
+	.dynamic_text {
+		font-size: 180%;
+		font-family: arial;
+		text-shadow: none;
+	}
+	.dynamic
+	{
+		font-size: 280%;
+	}
+	.dynamic .ui-btn-text {
+		font-size: 150%;
+	}
+	.bottle_button
+	{
+		height: 50%;
+	}
+	.home_button
+	{
+		height: 140px !important;
+		line-height: 76px !important;
+		align: center !important;
+		width: 280px !important;
+		font-size: 22pt !important;
+	}
+}
+ 
+/*headers*/
+h2 {
+	font-size: 120%;
+}
+
+h3 {
+	font-size: 100%;
+}
+
+#header {
+	background: #FFF;
+}
+
+#header_logo {
+	text-align: left;
+	margin: 4px 20px;
+	padding-top: 6px;
+}
+
+#header_home {
+    position: absolute;
+	top:0px;
+	right: 10px;
+	height:50px;
+}
+
+#nav {
+	margin: 0 7px;
+}
+
+#appLink {
+	text-align: center;
+	margin-top: 30px;
+	display: none;
+}
+.header_text
+{
+	font-size: 200%; font-weight: bold; color: #FFFFFF; padding: 20px 0 0 20px; margin: 0;
+}
+
+
+/*arrows*/
+.ui-collapsible.ui-collapsible-collapsed .ui-collapsible-heading .ui-icon-plus
+	{
+	background-position: -216px 0;
+}
+
+.ui-icon-arrow-l {
+	background-position: -144px 0;
+}
+
+.ui-icon-arrow-u {
+	background-position: -180px 0;
+}
+
+.ui-collapsible .ui-collapsible-heading .ui-icon-minus {
+	background-position: -180px 0;
+}
+
+.ui-btn-icon-left .ui-icon {
+	left: auto !important;
+	right: 10px !important;
+}
+
+.ui-collapsible-heading a .ui-btn-inner {
+	padding-left: 15px;
+}
+/*LIGHTBOX*/
+.lightbox {
+	position: absolute;
+	top: 45px !important;
+	width: 100%;
+	z-index: 1000;
+}
+
+#title h2 {
+	font-size: 150%;
+}
+
+.page {
+	background: #fff; /* Old browsers */
+}
+
+#header {
+	box-shadow: 0px 1px 5px #484848;
+	-moz-box-shadow: 0px 1px 5px #484848;
+	-webkit-box-shadow: 0px 1px 5px #484848;
+}
+
+#headerfill {
+	text-align: center;
+	padding: 5px 0 0 0;
+}
+
+.td_head {
+	background: #D3DCDC /*{a-bhover-background-color}*/;
+	font-weight: bold;
+	color: #5D5F5E /*{a-bhover-color}*/;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#d1dada
+		/*{a-bhover-background-start}*/),
+		to(#e7eded /*{a-bhover-background-end}*/)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(#d1dada /*{a-bhover-background-start}*/, #e7eded
+		/*{a-bhover-background-end}*/); /* Chrome 10+, Saf5.1+ */
+	background-image: -moz-linear-gradient(#d1dada /*{a-bhover-background-start}*/, #e7eded
+		/*{a-bhover-background-end}*/); /* FF3.6 */
+	background-image: -ms-linear-gradient(#d1dada /*{a-bhover-background-start}*/, #e7eded
+		/*{a-bhover-background-end}*/); /* IE10 */
+	background-image: -o-linear-gradient(#d1dada /*{a-bhover-background-start}*/, #e7eded
+		/*{a-bhover-background-end}*/); /* Opera 11.10+ */
+	background-image: linear-gradient(#d1dada /*{a-bhover-background-start}*/, #e7eded
+		/*{a-bhover-background-end}*/);
+}
+
+.data_table {
+	border: 1px solid #CECECE;
+	margin: 0;
+	font-size: 130%;
+}
+
+body.up .col1 {
+	width: 100%;
+	padding-bottom: 20px;
+}
+
+body.up .col2 {
+	width: 100%;
+}
+
+body.land .col1 {
+	float: left;
+	width: 50%;
+}
+
+body.land .col2 {
+	float: left;
+	width: 50%;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th,td {
+	padding: 7px;
+}
