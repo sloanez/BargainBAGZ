@@ -1,5 +1,5 @@
 <?php
-$con=mysqli_connect("zjs5048@p218inst01.cse.psu.edu","zjs5048","rt74937LT","infiniteloops");
+$con=mysqli_connect("localhost","zjs5048","rt74937LT","infiniteloops");
 // Check connection
 if (mysqli_connect_errno())
   {
@@ -10,8 +10,8 @@ $result = mysqli_query($con,"SELECT * FROM Users");
 
 while($row = mysqli_fetch_array($result))
   {
-  echo $row['Name'] . " " . $row['Email'];
-  echo "<br>";
+  	echo $row['Name'] . " " . $row['Email'];
+  	echo "<br>";
   }
 
 mysqli_close($con);
