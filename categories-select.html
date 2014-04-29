@@ -33,10 +33,19 @@
 				<h2	class="header_text">Categories and Search</h2>
 			</div>
 			<!--End of Page Title-->
-			<form action="search.php" method="post"> 
-			<input style="text-align:center;" type="text" name="search" /> 
+			<form id="search" method="post"> 
+			<input style="text-align:center;" type="text" name="search" id="searchfor" /> 
 			<input type="submit" value="Search" /> 
 			</form> 
+			<script>
+			$(document).ready(function() {
+				$('#search').submit( function() {              
+				  goUrl = 'searchview.html?' + $('#searchfor').val();
+				  window.location = goUrl;
+				  return false;  // Prevent the default form behaviour
+				});
+			});
+			</script>
 			<!--Menu Options-->
 			<div id="nav" class="dynamic_size">
 				<h3 class="dynamic_text"></h3>
