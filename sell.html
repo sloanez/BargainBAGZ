@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>State College Bar Tour</title>
+		<title>Bargain BAGZ</title>
 		<!--File Imports-->
 		<link rel="stylesheet" href="css/custom.css" />
 		<link rel="stylesheet" href="css/bartour.css" />
@@ -33,6 +33,59 @@
 				<h2	class="header_text">Sell An Item</h2>
 			</div>
 			<!--End of Page Title-->
+			<!--Menu Options-->
+			<form action="sell_form.asp">
+				Item Name: <input type="text" name="itemname" maxlength="40"><br>
+				Description: <textarea maxlength="500"></textarea><br>
+				Category: <select> 
+					<option selected disabled>Select A Category</option>
+					<option value="books">Books</option>
+					<option value="fiction">--> Fiction</option>
+					<option value="comicbooks">--> --> Comic Books</option>
+					<option value="nonfiction">--> Nonfiction</option>
+					<option value="clothes">Clothes</option>
+					<option value="pants">--> Pants</option>
+					<option value="shorts">--> --> Shorts</option>
+					<option value="shirts">--> Shirts</option>
+					<option value="electronics">Electronics</option>
+					<option value="videogames">--> Video Games</option>
+					<option value="sega">--> --> SEGA</option>
+					<option value="tablets">--> Tablets</option>
+					<option value="jewelry">Jewelry</option>
+					<option value="bracelets">--> Bracelets</option>
+					<option value="beaded">--> --> Beaded Bracelets</option>
+					<option value="necklaces">--> Necklaces</option>
+					<option value="toys">Toys</option>
+					<option value="actionfigures">--> Action Figures</option>
+					<option value="gijoe">--> --> G.I. Joe</option>
+					<option value="dolls">--> Dolls</option>
+				</select>
+				URL: <input type="text" name="url" maxlength="50"><br>
+				Starting Price: <input type="number" name="startprice"><br> <!--Set Highest Bid to this number, bidder ID to NULL-->
+				Reserve Price: <input type="number" name="reserveprice"><br><!--These have to be modified to 2 decimal places in php-->
+				Buy It Now Price: <input type="number" name="buyitnow"><br>
+				
+				<br>
+				<input type="submit" value="Submit">
+
+				<script>
+				  $(function () {
+					$('form').on('submit', function (e) {
+					  $.ajax({
+						type: 'post',
+						url: 'php/sell.php',
+						data: $('form').serialize(),
+						success: function () {
+						  alert('form was submitted');
+						  window.location.href = "index.html";						  
+						}
+					  });
+					  e.preventDefault();
+					});
+				  });
+				</script>
+			</form>
+			<!--End of Menu Options-->
 		</div>
 	</body>
 </html>
