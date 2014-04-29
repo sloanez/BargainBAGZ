@@ -46,7 +46,7 @@
 				while($row = mysqli_fetch_array($result)){
 					echo "<h1>" . $row['Item_Name'] . "</h1>";
 					echo "<h3><i>" . $row['Description'] . "</i></h3>";
-					echo ""
+					//echo "";
 				}
 			}	
 			else {	
