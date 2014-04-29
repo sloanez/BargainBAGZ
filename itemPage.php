@@ -43,12 +43,21 @@
 			$result = mysqli_query($con,"SELECT * FROM `Items` WHERE Item_No = $itemId");
 
 			if ($result && mysqli_num_rows($result) > 0) {
-				echo "Hello";
+				while($row = mysqli_fetch_array($result)){
+					echo "<h1>" . $row['Item_Name'] . "</h1>";
+					echo "<h3><i>" . $row['Description'] . "</i></h3>";
+					echo ""
+				}
 			}	
 			else {	
 				echo "<h1>Sorry, this item does not exist.</h1>";
 			 }
 		?>
+
+		<form name="bid" method="post" action="bid.php">
+			Bid: <input name="bidAmount" type="text">
+			<input type="submit" value="Submit">
+		</form>
 		
 		</div>
 	</body>
