@@ -30,12 +30,12 @@
 			<!-- End of Header Section -->
 			<!--Page Title-->
 			<div id="headerFill" class="dynamic_text">
-				<h3	class="header_text">Items containing "
-					<script>
-						var searchfor = (document.location.href.split('?'))[1].replace(/\%20/g, ' ');
-						document.write(searchfor);
-					</script>
-				" </h3>
+				
+					<?php
+					$searchfor = $_GET["searchfor"];
+					echo "<h3 class=\"header_text\"> Items containing".$searchfor."</h3>";
+					?>
+
 			</div>
 			<!--End of Page Title-->
 			

@@ -40,7 +40,7 @@
 			<script>
 			$(document).ready(function() {
 				$('#search').submit( function() {              
-				  goUrl = 'searchview.html?' + $('#searchfor').val();
+				  goUrl = 'searchview.php?searchfor=' + $('#searchfor').val();
 				  window.location = goUrl;
 				  return false;  // Prevent the default form behaviour
 				});
