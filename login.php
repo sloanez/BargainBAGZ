@@ -6,7 +6,6 @@
 	  echo "Failed to connect to MySQL: " . mysqli_connect_error();
 	  }
 
-	  echo "HELLOOO"
 	$email = $_POST["email"];
 	$password = $_POST["password"];
 
