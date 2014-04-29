@@ -1,0 +1,95 @@
+CREATE TABLE Users (
+	User_Id int auto_increment,
+	Password varchar(25) NOT NULL,
+	Phone_Num varchar(10),
+	Email varchar(140) UNIQUE NOT NULL,
+	Num_Sales int DEFAULT 0,
+	Reputation float,
+	PRIMARY KEY (User_Id)
+);
+
+CREATE TABLE Companies (
+	User_Id int,
+	Category varchar(30), 
+	Revenue real,
+	POC_Name varchar(100) NOT NULL,
+	POC_Email varchar(140) NOT NULL,
+	FOREIGN KEY (User_Id) REFERENCES Users,
+	PRIMARY KEY (User_Id)
+);
+
+CREATE TABLE Individuals (
+	User_Id int,
+	Annual_Income real,
+	Age int,
+	Male boolean,
+	FOREIGN KEY (User_Id) REFERENCES Users,
+	PRIMARY KEY (User_Id)
+);
+
+CREATE TABLE Address (
+	Address_Id int,
+	Street varchar(20),
+	House_Num int,
+	City varchar(40),
+	Stayt varchar(2),
+	ZIP varchar(5),
+	User_Id varchar(9),
+	FOREIGN KEY (User_Id) REFERENCES Users,
+	PRIMARY KEY (Address_Id)
+);
+
+CREATE TABLE Credit_Card (
+	Card_No varchar(16),
+	Security_No varchar(3) NOT NULL,
+	Card_Type varchar(30) NOT NULL,
+	Expiration varchar(5) NOT NULL,
+	User_Id int,
+	PRIMARY KEY(Card_No),
+	FOREIGN KEY(User_Id) REFERENCES Individuals
+);
+
+CREATE TABLE Items (
+	Item_No int,
+	Description varchar(500),
+	Category varchar(40) NOT NULL,
+	URL varchar(50) NOT NULL,
+	Reserve_Price real NOT NULL,
+	Buy_Now_Price real,
+	Highest_Bid real,
+	Bidder_Id int,
+	Start_Auction datetime NOT NULL,
+	End_Auction datetime NOT NULL,
+	PRIMARY KEY (Item_No),
+	FOREIGN KEY(Bidder_Id) REFERENCES Individuals(User_Id),
+	FOREIGN KEY(Category) REFERENCES Categories(Cat_Name)
+);
+
+CREATE TABLE Order_History (
+	User_Id int NOT NULL,
+	Item_No int NOT NULL,
+	Order_No int,
+	Card_No varchar(16) NOT NULL,
+	Order_Date datetime NOT NULL,
+	PRIMARY KEY (Order_No),
+	FOREIGN KEY (Item_No) REFERENCES Items,
+	FOREIGN KEY (Card_No) REFERENCES Credit_Card,
+	FOREIGN KEY (User_Id) REFERENCES Users
+);
+
+CREATE TABLE Ratings (
+	Being_Rated int NOT NULL,
+	Giving_Rating int NOT NULL,
+	Rating float NOT NULL,
+	Rater_Comment varchar(140),
+	PRIMARY KEY (Being_Rated, Giving_Rating),
+	FOREIGN KEY (Being_Rated) REFERENCES Users (User_Id),
+	FOREIGN KEY (Giving_Rating) REFERENCES Individuals (User_Id)
+);
+
+CREATE TABLE Categories (
+	Cat_Name varchar(40),
+	Super_Category varchar(40),
+	PRIMARY KEY (Name),
+	FOREIGN KEY (Super_Category) REFERENCES Categories (Name)
+);
