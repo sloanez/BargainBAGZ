@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>State College Bar Tour</title>
+<title>Item Listing</title>
 <!--File Imports-->
 <link rel="stylesheet" href="css/custom.css" />
 <link rel="stylesheet" href="css/bartour.css" />
@@ -45,17 +45,24 @@
 			if ($result && mysqli_num_rows($result) > 0) {
 				while($row = mysqli_fetch_array($result)){
 					echo "<h1>" . $row['Item_Name'] . "</h1>";
+					// Seller: MAKE IT A LINK
 					echo "<h3><i>" . $row['Description'] . "</i></h3>";
-					//echo "";
+					// For more info: description (if url exists)
+					// Shipped From: GET FROM ADDR OF SELLER ID IN addresstable
+					echo "<b>Current Price</b>: $" . $row['Highest_Bid'] . "<br><br>";
+					// Count Down Clock
+					echo "<b>Buy It Now Price</b>: $" .  $row['Buy_Now_Price'] . "<form name=\"buyNow\" method=\"post\" action=\"buynow.php\">
+					<input type=\"submit\" value=\"Buy It Now!\">
+					</form>";
 				}
 			}	
 			else {	
 				echo "<h1>Sorry, this item does not exist.</h1>";
 			 }
 		?>
-
+		<br><br>
 		<form name="bid" method="post" action="bid.php">
-			Bid: <input name="bidAmount" type="text">
+			<b>Bid</b>: <input name="bidAmount" type="text">
 			<input type="submit" value="Submit">
 		</form>
 		
