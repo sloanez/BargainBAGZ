@@ -32,9 +32,9 @@ $income = $_POST["income"];
 
 echo "WHAAAT";
 
-$result = mysqli_query($con,"INSERT Into Users (Email,Password,Phone_Num) Values ('$email', '$password', '$phone')");
+$result = mysqli_query($con,"INSERT Into Users (Password,Phone_Num) Values ('$password', '$phone')");
 echo mysqli_error($con);
-$user_id = mysqli_query($con,"SELECT User_Id from Users WHERE Phone_Num = '$phone')");
+$user_id = mysqli_query($con,"SELECT User_Id from Users WHERE Phone_Num = '$phone'");
 echo mysqli_error($con);
 $result2 = mysqli_query($con,"INSERT Into Individuals (User_Id, Annual_Income, Age, Male) Values ('$user_id', '$income', '$age', '$gender')");
 echo mysqli_error($con);
