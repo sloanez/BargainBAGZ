@@ -38,8 +38,8 @@
 				<h3 class="dynamic_text"></h3>
 				<div id="list">
 					<ul class="dynamic" data-role="listview" data-inset="true" data-theme="a">
-						<li><a href="fiction-view.html" rel="external">All Fiction</a></li>
-						<li><a href="comic-books-view.html" rel="external">Comic Books</a></li>
+						<li><a href="fiction-view.php" rel="external">All Fiction</a></li>
+						<li><a href="comic-books-view.php" rel="external">Comic Books</a></li>
 					</ul>
 				</div>
 			</div>
