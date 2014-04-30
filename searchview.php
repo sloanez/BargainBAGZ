@@ -30,11 +30,8 @@
 			<!-- End of Header Section -->
 			<!--Page Title-->
 			<div id="headerFill" class="dynamic_text">
-				
-					<?php
-					$searchfor = $_GET["searchfor"];
-					echo "<h3 class=\"header_text\"> Items containing".$searchfor."</h3>";
-					?>
+				<h3 class="header_text">Items containing "<?php echo $_GET["searchfor"]; ?>"<h3>
+					
 
 			</div>
 			<!--End of Page Title-->
