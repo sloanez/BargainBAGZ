@@ -51,27 +51,27 @@ INSERT INTO `Users`(`Password`, `Num_Sales`, `Phone_Num`, `Reputation`) VALUES (
 
 #INDIVIDUALS
 INSERT INTO `Individuals`(`User_Id`, `Annual_Income`, `Age`, `Male`, `Email`) 
-	VALUES (1,100000,21,FALSE,"ghjl3e@gmail.com");
+	VALUES (1,"UPPER",21,FALSE,"ghjl3e@gmail.com");
 INSERT INTO `Individuals`(`User_Id`, `Annual_Income`, `Age`, `Male`, `Email`) 
-	VALUES (2,70000,22,FALSE,"azo5060@gmail.com");
+	VALUES (2,"MIDDLE",22,FALSE,"azo5060@gmail.com");
 INSERT INTO `Individuals`(`User_Id`, `Annual_Income`, `Age`, `Male`, `Email`) 
-	VALUES (3,80000,22,TRUE,"zjs5048@gmail.com");
+	VALUES (3,"MIDDLE_UPPER",22,TRUE,"zjs5048@gmail.com");
 INSERT INTO `Individuals`(`User_Id`, `Annual_Income`, `Age`, `Male`, `Email`) 
-	VALUES (4,40000,43,TRUE,"mrdude@gmail.com");
+	VALUES (4,"LOWER_MIDDLE",43,TRUE,"mrdude@gmail.com");
 INSERT INTO `Individuals`(`User_Id`, `Annual_Income`, `Age`, `Male`, `Email`) 
-	VALUES (5,22000,28,FALSE,"bobbytables@gmail.com");
+	VALUES (5,"LOWER",28,FALSE,"bobbytables@gmail.com");
 INSERT INTO `Individuals`(`User_Id`, `Annual_Income`, `Age`, `Male`, `Email`) 
-	VALUES (6,3000,16,FALSE,"ducktables@gmail.com");
+	VALUES (6,"LOWER",16,FALSE,"ducktables@gmail.com");
 INSERT INTO `Individuals`(`User_Id`, `Annual_Income`, `Age`, `Male`, `Email`) 
-	VALUES (7,45000,36,TRUE,"hsdropout@gmail.com");
+	VALUES (7,"LOWER_MIDDLE",36,TRUE,"hsdropout@gmail.com");
 
 #COMPANIES
-INSERT INTO `Companies`(`User_Id`, `Category`, `Revenue`, `POC_Name`, `POC_Email`) 
-	VALUES (8,"Learning Tools",99000,"Bill Nye","thescienceguy@pbs.com");
-INSERT INTO `Companies`(`User_Id`, `Category`, `Revenue`, `POC_Name`, `POC_Email`) 
-	VALUES (9,"Security",357000,"Edward Snowden","spy@russia.com");
-INSERT INTO `Companies`(`User_Id`, `Category`, `Revenue`, `POC_Name`, `POC_Email`) 
-	VALUES (10,"Education",999000,"Nittany Lion","roar@psu.edu");
+INSERT INTO `Companies`(`User_Id`, `User_Name`, `Category`, `Revenue`, `POC_Name`, `POC_Email`) 
+	VALUES (8,"Leapfrog","Learning Tools",99000,"Bill Nye","thescienceguy@pbs.com");
+INSERT INTO `Companies`(`User_Id`, `User_Name`, `Category`, `Revenue`, `POC_Name`, `POC_Email`) 
+	VALUES (9,"SecureForYOU", "Security",357000,"Edward Snowden","spy@russia.com");
+INSERT INTO `Companies`(`User_Id`, `User_Name`, `Category`, `Revenue`, `POC_Name`, `POC_Email`) 
+	VALUES (10,"Penn State", "Education",999000,"Nittany Lion","roar@psu.edu");
 
 #INDIVIDUALS
 INSERT INTO `Address`( `Street`, `House_Num`, `City`, `Stayt`, `ZIP`, `User_Id`) 
