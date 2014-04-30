@@ -34,7 +34,7 @@
 			</div>
 			<!--End of Page Title-->
 			
-			<!-- All books -->
+			<!-- All Jewelry -->
 
 			<?php
 				$con=mysqli_connect("127.0.0.1","loops","password","infiniteloops");
