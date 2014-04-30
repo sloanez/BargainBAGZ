@@ -44,7 +44,7 @@
 		$gender = 0;
 	}
 
-	$result2 = mysqli_query($con,"INSERT Into Individuals (User_Id, User_Name, Annual_Income, Age, Male, Email) Values ('$user_id', '$name', $income', '$age', '$gender', '$email')");
+	$result2 = mysqli_query($con,"INSERT Into Individuals (User_Id, User_Name, Annual_Income, Age, Male, Email) Values ('$user_id', '$name', '$income', '$age', '$gender', '$email')");
 	echo mysqli_error($con);
 	$result3 = mysqli_query($con,"INSERT Into Address (Street,House_Num,City,Stayt,ZIP,User_Id) Values ('$street', '$house_num', '$city', '$state', '$zip', '$user_id')");
 	echo mysqli_error($con);
