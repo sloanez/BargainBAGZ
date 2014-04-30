@@ -6,6 +6,8 @@ if (mysqli_connect_errno())
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
+var_dump($_POST);
+
 $email = $_POST["email"];
 $password = $_POST["password"];
 $f_name = $_POST["fname"];
@@ -28,10 +30,11 @@ $sec_num = $_POST["sec_num"];
 
 $income = $_POST["income"];
 
+echo "WHAAAT";
 
 $result = mysqli_query($con,"INSERT Into Users (Email,Password,Phone_Num) Values ('$email', '$password', '$phone')");
 echo mysqli_error($con);
-$user_id = mysqli_query($con,"SELECT User_Id from Users WHERE Email = '$email')");
+$user_id = mysqli_query($con,"SELECT User_Id from Users WHERE Phone_Num = '$phone')");
 echo mysqli_error($con);
 $result2 = mysqli_query($con,"INSERT Into Individuals (User_Id, Annual_Income, Age, Male) Values ('$user_id', '$income', '$age', '$gender')");
 echo mysqli_error($con);

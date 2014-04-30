@@ -35,7 +35,7 @@
 			</div>
 			<!--End of Page Title-->
 			<!--Menu Options-->
-			<form action="individual_form.asp">
+			<form action="php/individual-signup.php" method="post">
 				Email: <input type="text" name="email"><br>
 				Password: <input type="password" name="password"><br>
 				Confirm Password: <input type="password" name="password2"><br>
@@ -51,7 +51,6 @@
 				House Num: <input type="number" name="house_num"><br>
 				Street: <input type="text" name="street"><br>
 				City: <input type="text" name="city"><br>
-				ZIP: <input type="text" name="zip"><br>
 				State: <select name="state"> 
 					<option value="AL">AL</option>
 					<option value="AK">AK</option>
@@ -102,6 +101,7 @@
 					<option value="WY">WY</option>
 					<option value="DC">DC</option>
 				</select>
+				ZIP: <input type="text" name="zip"><br>
 				Credit Card Number: <input type="text" name="cc_no"><br>
 				Credit Card Type: <select name="cc_type"> 
 					<option value="american_express">American Express</option>
@@ -149,27 +149,8 @@
 					<option value="Middle_Upper">$75,000 - $100,000</option>
 					<option value="Upper">$100,000+</option>
 					</select> 
-
-
 				<br><br>
 				<input type="submit" value="Submit">
-
-				<script>
-				  $(function () {
-					$('form').on('submit', function (e) {
-					  $.ajax({
-						type: 'post',
-						url: 'php/individual-signup.php',
-						data: $('form').serialize(),
-						success: function () {
-						  alert('form was submitted');
-						  window.location.href = "index.html";						  
-						}
-					  });
-					  e.preventDefault();
-					});
-				  });
-				</script>
 			</form>
 			<!--End of Menu Options-->
 		</div>
