@@ -19,7 +19,7 @@
 			<!--Header Section-->
 			<div id="header" data-role="header" data-theme="a">
 				<div id="header_logo">
-				<a href="electronics.html" data-ajax="false" data-prefetch
+				<a href="toys.php" data-ajax="false" data-prefetch
 						data-role="button" id="homebtn" class="home_button">Back</a>
 				</div>
 				<div id="header_home">
@@ -30,20 +30,9 @@
 			<!-- End of Header Section -->
 			<!--Page Title-->
 			<div id="headerFill" class="dynamic_text">
-				<h2	class="header_text">Video Games</h2>
+				<h2	class="header_text">All Toys</h2>
 			</div>
 			<!--End of Page Title-->
-			<!--Menu Options-->
-			<div id="nav" class="dynamic_size">
-				<h3 class="dynamic_text"></h3>
-				<div id="list">
-					<ul class="dynamic" data-role="listview" data-inset="true" data-theme="a">
-						<li><a href="video-games-view.html" rel="external">All Video Games</a></li>
-						<li><a href="sega-view.html" rel="external">SEGA</a></li>
-					</ul>
-				</div>
-			</div>
-			<!--End of Menu Options-->
 		</div>
 	</body>
 </html>

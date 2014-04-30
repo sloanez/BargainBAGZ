@@ -17,20 +17,20 @@
 	<body>	
 		<div id="page_home" class="page" data-role="page">
 			<!--Header Section-->
-			<div id="header" data-role="header" data-theme="a">
-				<div id="header_logo">
-				<a href="jewelry.html" data-ajax="false" data-prefetch
-						data-role="button" id="homebtn" class="home_button">Back</a>
+			<div id="header" data-role="her_logo">
+				<a href="bracelets.php" data-ajax="false" data-prefetch
+						data-roader" data-theme="a">
+				<div id="headele="button" id="homebtn" class="home_button">Back</a>
 				</div>
 				<div id="header_home">
 					<a href="../index.html" data-ajax="false" data-prefetch
 						data-role="button" id="homebtn" class="home_button">Home</a>
 				</div>				
-			</div>		
+			</div>			
 			<!-- End of Header Section -->
 			<!--Page Title-->
 			<div id="headerFill" class="dynamic_text">
-				<h2	class="header_text">Necklaces</h2>
+				<h2	class="header_text">All Bracelets</h2>
 			</div>
 			<!--End of Page Title-->
 		</div>

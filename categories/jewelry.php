@@ -19,7 +19,7 @@
 			<!--Header Section-->
 			<div id="header" data-role="header" data-theme="a">
 				<div id="header_logo">
-				<a href="fiction.html" data-ajax="false" data-prefetch
+				<a href="../categories-select.php" data-ajax="false" data-prefetch
 						data-role="button" id="homebtn" class="home_button">Back</a>
 				</div>
 				<div id="header_home">
@@ -30,9 +30,21 @@
 			<!-- End of Header Section -->
 			<!--Page Title-->
 			<div id="headerFill" class="dynamic_text">
-				<h2	class="header_text">All Fiction</h2>
+				<h2	class="header_text">Jewelry</h2>
 			</div>
 			<!--End of Page Title-->
+			<!--Menu Options-->
+			<div id="nav" class="dynamic_size">
+				<h3 class="dynamic_text"></h3>
+				<div id="list">
+					<ul class="dynamic" data-role="listview" data-inset="true" data-theme="a">
+						<li><a href="jewelry-view.php" rel="external">All Jewelry</a></li>
+						<li><a href="bracelets.php" rel="external">Bracelets</a></li>
+						<li><a href="necklaces-view.php" rel="external">Necklaces</a></li>
+					</ul>
+				</div>
+			</div>
+			<!--End of Menu Options-->
 		</div>
 	</body>
 </html>

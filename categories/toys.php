@@ -26,11 +26,11 @@
 					<a href="../index.html" data-ajax="false" data-prefetch
 						data-role="button" id="homebtn" class="home_button">Home</a>
 				</div>				
-			</div>			
+			</div>		
 			<!-- End of Header Section -->
 			<!--Page Title-->
 			<div id="headerFill" class="dynamic_text">
-				<h2	class="header_text">Clothes</h2>
+				<h2	class="header_text">Toys</h2>
 			</div>
 			<!--End of Page Title-->
 			<!--Menu Options-->
@@ -38,9 +38,9 @@
 				<h3 class="dynamic_text"></h3>
 				<div id="list">
 					<ul class="dynamic" data-role="listview" data-inset="true" data-theme="a">
-						<li><a href="clothes-view.html" rel="external">All Clothes</a></li>
-						<li><a href="pants.html" rel="external">Pants</a></li>
-						<li><a href="shirts-view.html" rel="external">Shirts</a></li>
+						<li><a href="toys-view.php" rel="external">All Toys</a></li>
+						<li><a href="action-figures.php" rel="external">Action Figures</a></li>
+						<li><a href="dolls-view.php" rel="external">Dolls</a></li>
 					</ul>
 				</div>
 			</div>
