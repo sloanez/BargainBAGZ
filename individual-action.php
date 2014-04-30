@@ -40,7 +40,6 @@
 		$gender = 1;
 	}
 	else {
-		echo "girl";
 		$gender = 0;
 	}
 
@@ -51,5 +50,5 @@
 	$result4 = mysqli_query($con,"INSERT Into Credit_Card (Card_No,Security_No,Card_Type,Expiration,User_Id) Values ('$cc_num', '$sec_num', '$cc_type', '$exp_date', '$user_id')");
 	echo mysqli_error($con);
 
-
+	header('Location: successful-signup.html');
 ?>
