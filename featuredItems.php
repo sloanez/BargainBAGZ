@@ -78,7 +78,7 @@
 					echo "Failed to connect to MySQL: " . mysqli_connect_error();
 				}
 
-				$result = mysqli_query($con,"SELECT * FROM `Items`");
+				$result = mysqli_query($con,"SELECT * FROM `Items` ORDER BY RAND() LIMIT 4");
 
 				if ($result && mysqli_num_rows($result) > 0) {
 					echo "<div id=\"nav\" class=\"dynamic_size\">

@@ -107,14 +107,28 @@
 							}
 							echo "</ul></div></div>";
 						}
-
-
-						// Rate this user button
-						echo "<br><br><button type=\"button\">Rate User!</button>"; 
-
 					}
 
 				}
+
+				echo "<form action=\"php/rate.php\" method=\"POST\">
+					Rating (out of 10): <select name="rating">
+											<option value=1>1</option>
+											<option value=1>2</option>
+											<option value=1>3</option>
+											<option value=1>4</option>
+											<option value=1>5</option>
+											<option value=1>6</option>
+											<option value=1>7</option>
+											<option value=1>8</option>
+											<option value=1>9</option>
+											<option value=1>10</option>
+											</select>
+
+				Comment: <input type=\"text\" name=\"name\"><br>
+
+				<input type=\"submit\" value=\"Submit\"> 
+				</form>";
 			}
 			else {
 				echo "<h1>Sorry, this user does not exist</h1>";
