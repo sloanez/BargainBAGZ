@@ -85,7 +85,8 @@ h3 {
 #header_logo {
 	text-align: left;
 	margin: 4px 20px;
-	padding-top: 6px;
+	padding-top: 2px;
+	
 }
 
 #header_home {
@@ -93,6 +94,10 @@ h3 {
 	top:0px;
 	right: 10px;
 	height:50px;
+	
+	text-align: left;
+	margin: 4px 20px;
+	padding-top: 2px;
 }
 
 #nav {
