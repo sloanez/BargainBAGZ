@@ -19,7 +19,10 @@
 			<!--Header Section-->
 			<div id="header" data-role="header" data-theme="a">
 				<div id="header_logo">
-					<a href="index.html" data-ajax="false" data-prefetch data-role="button" id="homebtn" class="home_button">BACK</a>
+				<script>
+					function goBack() {window.history.back ();}
+				</script>
+					<a href=data-ajax="false" data-prefetch data-role="button" id="homebtn" class="home_button" onclick="goBack()">BACK</a>
 				</div>
 				<div id="header_home">
 				<a href="index.html" data-ajax="false" data-prefetch data-role="button" id="homebtn" class="home_button">HOME</a>

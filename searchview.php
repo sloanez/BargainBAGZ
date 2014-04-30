@@ -52,16 +52,17 @@
 				$result = mysqli_query($con,"SELECT * FROM `Items` WHERE Item_Name LIKE '%{$searchFor}%'");
 
 				if ($result && mysqli_num_rows($result) > 0) {
-					while($row = mysqli_fetch_array($result)){
-						echo "<div id=\"nav\" class=\"dynamic_size\">
+					echo "<div id=\"nav\" class=\"dynamic_size\">
 							<h3 class=\"dynamic_text\"></h3>
 							<div id=\"list\">
-								<ul class=\"dynamic\" data-role=\"listview\" data-inset=\"true\" data-theme=\"a\">
-									<li><a href=\"itemPage.php?itemId=" . $row["Item_No"] . "\" rel=\"external\">" . $row['Item_Name'] . "</a></li>
-								</ul>
+								<ul class=\"dynamic\" data-role=\"listview\" data-inset=\"true\" data-theme=\"a\">";
+					while($row = mysqli_fetch_array($result)){
+						
+						echo "<li><a href=\"itemPage.php?itemId=" . $row["Item_No"] . "\" rel=\"external\">" . $row['Item_Name'] . "</a></li>";
+					}
+					echo "</ul>
 							</div>
 						</div>";
-					}
 				}
 				else {
 					echo "<h1>Sorry, this item does not exist</h1>";
