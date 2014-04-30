@@ -48,22 +48,21 @@ INSERT INTO `Users`(`Password`, `Num_Sales`, `Phone_Num`, `Reputation`) VALUES (
 INSERT INTO `Users`(`Password`, `Num_Sales`, `Phone_Num`, `Reputation`) VALUES ("secure&password",246,"5552833675",0.0);
 INSERT INTO `Users`(`Password`, `Num_Sales`, `Phone_Num`, `Reputation`) VALUES ("pennstate",213,"8149871234",0.0);
 
-
 #INDIVIDUALS
-INSERT INTO `Individuals`(`User_Id`, `Annual_Income`, `Age`, `Male`, `Email`) 
-	VALUES (1,"UPPER",21,FALSE,"ghjl3e@gmail.com");
-INSERT INTO `Individuals`(`User_Id`, `Annual_Income`, `Age`, `Male`, `Email`) 
-	VALUES (2,"MIDDLE",22,FALSE,"azo5060@gmail.com");
-INSERT INTO `Individuals`(`User_Id`, `Annual_Income`, `Age`, `Male`, `Email`) 
-	VALUES (3,"MIDDLE_UPPER",22,TRUE,"zjs5048@gmail.com");
-INSERT INTO `Individuals`(`User_Id`, `Annual_Income`, `Age`, `Male`, `Email`) 
-	VALUES (4,"LOWER_MIDDLE",43,TRUE,"mrdude@gmail.com");
-INSERT INTO `Individuals`(`User_Id`, `Annual_Income`, `Age`, `Male`, `Email`) 
-	VALUES (5,"LOWER",28,FALSE,"bobbytables@gmail.com");
-INSERT INTO `Individuals`(`User_Id`, `Annual_Income`, `Age`, `Male`, `Email`) 
-	VALUES (6,"LOWER",16,FALSE,"ducktables@gmail.com");
-INSERT INTO `Individuals`(`User_Id`, `Annual_Income`, `Age`, `Male`, `Email`) 
-	VALUES (7,"LOWER_MIDDLE",36,TRUE,"hsdropout@gmail.com");
+INSERT INTO `Individuals`(`User_Id`,`User_Name`, `Annual_Income`, `Age`, `Male`, `Email`)
+	VALUES (1,"Ginny Love","UPPER",21,FALSE,"ghjl3e@gmail.com");
+INSERT INTO `Individuals`(`User_Id`,`User_Name`, `Annual_Income`, `Age`, `Male`, `Email`) 
+	VALUES (2,"Azalea Olive","MIDDLE",22,FALSE,"azo5060@gmail.com");
+INSERT INTO `Individuals`(`User_Id`,`User_Name`, `Annual_Income`, `Age`, `Male`, `Email`) 
+	VALUES (3,"Zane Joseph Samuel","MIDDLE UPPER",22,TRUE,"zjs5048@gmail.com");
+INSERT INTO `Individuals`(`User_Id`,`User_Name`, `Annual_Income`, `Age`, `Male`, `Email`) 
+	VALUES (4,"Mortimer Dude","LOWER MIDDLE",43,TRUE,"mrdude@gmail.com");
+INSERT INTO `Individuals`(`User_Id`,`User_Name`, `Annual_Income`, `Age`, `Male`, `Email`) 
+	VALUES (5,"Bobby Tables","LOWER",28,FALSE,"bobbytables@gmail.com");
+INSERT INTO `Individuals`(`User_Id`,`User_Name`, `Annual_Income`, `Age`, `Male`, `Email`) 
+	VALUES (6,"David Duck","LOWER",16,FALSE,"ducktables@gmail.com");
+INSERT INTO `Individuals`(`User_Id`,`User_Name`, `Annual_Income`, `Age`, `Male`, `Email`) 
+	VALUES (7,"Bob Marley","LOWER MIDDLE",36,TRUE,"hsdropout@gmail.com");
 
 #COMPANIES
 INSERT INTO `Companies`(`User_Id`, `User_Name`, `Category`, `Revenue`, `POC_Name`, `POC_Email`) 

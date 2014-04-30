@@ -10,6 +10,7 @@
 	$password = $_POST["password"];
 	$f_name = $_POST["fname"];
 	$l_name = $_POST["lname"];
+	$name = $f_name . " " . $l_name;
 	$age = $_POST["age"];
 	$gender = $_POST["gender"];
 	$phone = $_POST["phone"];
@@ -43,7 +44,7 @@
 		$gender = 0;
 	}
 
-	$result2 = mysqli_query($con,"INSERT Into Individuals (User_Id, Annual_Income, Age, Male, Email) Values ('$user_id', '$income', '$age', '$gender', '$email')");
+	$result2 = mysqli_query($con,"INSERT Into Individuals (User_Id, User_Name, Annual_Income, Age, Male, Email) Values ('$user_id', '$name', $income', '$age', '$gender', '$email')");
 	echo mysqli_error($con);
 	$result3 = mysqli_query($con,"INSERT Into Address (Street,House_Num,City,Stayt,ZIP,User_Id) Values ('$street', '$house_num', '$city', '$state', '$zip', '$user_id')");
 	echo mysqli_error($con);
