@@ -1,0 +1,178 @@
+DELETE FROM `Users`;
+DELETE FROM `Individuals`;
+DELETE FROM `Companies`;
+DELETE FROM `Order_History`;
+DELETE FROM `Ratings`;
+DELETE FROM `Credit_Card`;
+DELETE FROM `Items`;
+DELETE FROM `Categories`;
+
+ALTER TABLE `Users` AUTO_INCREMENT=1;
+ALTER TABLE `Items` AUTO_INCREMENT=1;
+ALTER TABLE `Address` AUTO_INCREMENT=1;
+
+
+INSERT INTO `Categories`(`Cat_Name`) VALUES ("root");
+INSERT INTO `Categories`(`Cat_Name`, `Super_Category`) VALUES ("Toys","root");
+INSERT INTO `Categories`(`Cat_Name`, `Super_Category`) VALUES ("Clothes","root");
+INSERT INTO `Categories`(`Cat_Name`, `Super_Category`) VALUES ("Electronics","root");
+INSERT INTO `Categories`(`Cat_Name`, `Super_Category`) VALUES ("Jewelry","root");
+INSERT INTO `Categories`(`Cat_Name`, `Super_Category`) VALUES ("Books","root");
+INSERT INTO `Categories`(`Cat_Name`, `Super_Category`) VALUES ("Action Figures","Toys");
+INSERT INTO `Categories`(`Cat_Name`, `Super_Category`) VALUES ("G.I. Joe","Action Figures");
+INSERT INTO `Categories`(`Cat_Name`, `Super_Category`) VALUES ("Dolls","Toys");
+INSERT INTO `Categories`(`Cat_Name`, `Super_Category`) VALUES ("Pants","Clothes");
+INSERT INTO `Categories`(`Cat_Name`, `Super_Category`) VALUES ("Shorts","Pants");
+INSERT INTO `Categories`(`Cat_Name`, `Super_Category`) VALUES ("Shirts","Clothes");
+INSERT INTO `Categories`(`Cat_Name`, `Super_Category`) VALUES ("Video Games","Electronics");
+INSERT INTO `Categories`(`Cat_Name`, `Super_Category`) VALUES ("SEGA","Video Games");
+INSERT INTO `Categories`(`Cat_Name`, `Super_Category`) VALUES ("Tablets","Electronics");
+INSERT INTO `Categories`(`Cat_Name`, `Super_Category`) VALUES ("Bracelets","Jewelry");
+INSERT INTO `Categories`(`Cat_Name`, `Super_Category`) VALUES ("Beaded Bracelets","Bracelets");
+INSERT INTO `Categories`(`Cat_Name`, `Super_Category`) VALUES ("Necklaces","Jewelry");
+INSERT INTO `Categories`(`Cat_Name`, `Super_Category`) VALUES ("Fiction","Books");
+INSERT INTO `Categories`(`Cat_Name`, `Super_Category`) VALUES ("Comic Books","Fiction");
+INSERT INTO `Categories`(`Cat_Name`, `Super_Category`) VALUES ("Nonfiction","Books");
+INSERT INTO `Categories`(`Cat_Name`, `Super_Category`) VALUES ("Miscellaneous","root");
+
+#individuals
+INSERT INTO `Users`(`Password`, `Num_Sales`, `Phone_Num`, `Reputation`) VALUES ("reallygoodpassword",10,"8141234567",0.0);
+INSERT INTO `Users`(`Password`, `Num_Sales`, `Phone_Num`, `Reputation`) VALUES ("funny",3,"7176096832",0.0);
+INSERT INTO `Users`(`Password`, `Num_Sales`, `Phone_Num`, `Reputation`) VALUES ("iamcool",7,"5554321987",10.0);
+INSERT INTO `Users`(`Password`, `Num_Sales`, `Phone_Num`, `Reputation`) VALUES ("random3",16,"9880012233",0.0);
+INSERT INTO `Users`(`Password`, `Num_Sales`, `Phone_Num`, `Reputation`) VALUES ("ilovehotdogs",24,"7322757445",0.0);
+INSERT INTO `Users`(`Password`, `Num_Sales`, `Phone_Num`, `Reputation`) VALUES ("ducks",26,"7032881234",0.0);
+INSERT INTO `Users`(`Password`, `Num_Sales`, `Phone_Num`, `Reputation`) VALUES ("mypassword",9,"8149997766",0.0);
+#companies
+INSERT INTO `Users`(`Password`, `Num_Sales`, `Phone_Num`, `Reputation`) VALUES ("abcd123",202,"2034567890",0.0);
+INSERT INTO `Users`(`Password`, `Num_Sales`, `Phone_Num`, `Reputation`) VALUES ("secure&password",246,"5552833675",0.0);
+INSERT INTO `Users`(`Password`, `Num_Sales`, `Phone_Num`, `Reputation`) VALUES ("pennstate",213,"8149871234",0.0);
+
+
+#INDIVIDUALS
+INSERT INTO `Individuals`(`User_Id`, `Annual_Income`, `Age`, `Male`, `Email`) 
+	VALUES (1,100000,21,FALSE,"ghjl3e@gmail.com");
+INSERT INTO `Individuals`(`User_Id`, `Annual_Income`, `Age`, `Male`, `Email`) 
+	VALUES (2,70000,22,FALSE,"azo5060@gmail.com");
+INSERT INTO `Individuals`(`User_Id`, `Annual_Income`, `Age`, `Male`, `Email`) 
+	VALUES (3,80000,22,TRUE,"zjs5048@gmail.com");
+INSERT INTO `Individuals`(`User_Id`, `Annual_Income`, `Age`, `Male`, `Email`) 
+	VALUES (4,40000,43,TRUE,"mrdude@gmail.com");
+INSERT INTO `Individuals`(`User_Id`, `Annual_Income`, `Age`, `Male`, `Email`) 
+	VALUES (5,22000,28,FALSE,"bobbytables@gmail.com");
+INSERT INTO `Individuals`(`User_Id`, `Annual_Income`, `Age`, `Male`, `Email`) 
+	VALUES (6,3000,16,FALSE,"ducktables@gmail.com");
+INSERT INTO `Individuals`(`User_Id`, `Annual_Income`, `Age`, `Male`, `Email`) 
+	VALUES (7,45000,36,TRUE,"hsdropout@gmail.com");
+
+#COMPANIES
+INSERT INTO `Companies`(`User_Id`, `Category`, `Revenue`, `POC_Name`, `POC_Email`) 
+	VALUES (8,"Learning Tools",99000,"Bill Nye","thescienceguy@pbs.com");
+INSERT INTO `Companies`(`User_Id`, `Category`, `Revenue`, `POC_Name`, `POC_Email`) 
+	VALUES (9,"Security",357000,"Edward Snowden","spy@russia.com");
+INSERT INTO `Companies`(`User_Id`, `Category`, `Revenue`, `POC_Name`, `POC_Email`) 
+	VALUES (10,"Education",999000,"Nittany Lion","roar@psu.edu");
+
+#INDIVIDUALS
+INSERT INTO `Address`( `Street`, `House_Num`, `City`, `Stayt`, `ZIP`, `User_Id`) 
+	VALUES ("Burrowes Rd",312,"State College","PA","16801",1);
+INSERT INTO `Address`( `Street`, `House_Num`, `City`, `Stayt`, `ZIP`, `User_Id`) 
+	VALUES ("Pollock Rd",416,"State College","PA","16801",2);
+INSERT INTO `Address`( `Street`, `House_Num`, `City`, `Stayt`, `ZIP`, `User_Id`) 
+	VALUES ("Beaver Ave",42,"Philadelphia","PA","19109",3);
+INSERT INTO `Address`( `Street`, `House_Num`, `City`, `Stayt`, `ZIP`, `User_Id`) 
+	VALUES ("Mullberry Lane",5,"Wichita","KS","67037",4);
+INSERT INTO `Address`( `Street`, `House_Num`, `City`, `Stayt`, `ZIP`, `User_Id`) 
+	VALUES ("Old Ledge",1420,"Burnt Hill","OH","43995",5);
+INSERT INTO `Address`( `Street`, `House_Num`, `City`, `Stayt`, `ZIP`, `User_Id`) 
+	VALUES ("Orange St",13,"Anaheim","CA","92801",6);
+INSERT INTO `Address`( `Street`, `House_Num`, `City`, `Stayt`, `ZIP`, `User_Id`) 
+	VALUES ("Wilshire Blvd",1225,"Los Angeles","CA","90017",7);
+	
+#COMPANIES
+INSERT INTO `Address`( `Street`, `House_Num`, `City`, `Stayt`, `ZIP`, `User_Id`) 
+	VALUES ("Academy Drive",1825,"Anchorage","AK","99507",8);
+INSERT INTO `Address`( `Street`, `House_Num`, `City`, `Stayt`, `ZIP`, `User_Id`) 
+	VALUES ("Dauphin St",3719,"Mobile","AL","36608",9);
+INSERT INTO `Address`( `Street`, `House_Num`, `City`, `Stayt`, `ZIP`, `User_Id`) 
+	VALUES ("College Ave",402,"University Park","PA","16802",10);
+
+
+#only for individuals
+INSERT INTO `Credit_Card`(`Card_No`, `Security_No`, `Card_Type`, `Expiration`, `User_Id`) 
+	VALUES ("4024007159119543","654","VISA","02/18",1);
+INSERT INTO `Credit_Card`(`Card_No`, `Security_No`, `Card_Type`, `Expiration`, `User_Id`) 
+	VALUES ("4929836896378277","367","VISA","04/17",2);
+INSERT INTO `Credit_Card`(`Card_No`, `Security_No`, `Card_Type`, `Expiration`, `User_Id`) 
+	VALUES ("5346567341220713","144","MASTERCARD","10/14",3);
+INSERT INTO `Credit_Card`(`Card_No`, `Security_No`, `Card_Type`, `Expiration`, `User_Id`) 
+	VALUES ("377789429136552","902","AMERICAN EXPRESS","09/17",4);
+INSERT INTO `Credit_Card`(`Card_No`, `Security_No`, `Card_Type`, `Expiration`, `User_Id`) 
+	VALUES ("4556032227241463","615","VISA","05/15",5);
+INSERT INTO `Credit_Card`(`Card_No`, `Security_No`, `Card_Type`, `Expiration`, `User_Id`) 
+	VALUES ("5170725033866356","732","MASTERCARD","12/18",6);
+INSERT INTO `Credit_Card`(`Card_No`, `Security_No`, `Card_Type`, `Expiration`, `User_Id`) 
+	VALUES ("5562067078718572","312","MASTERCARD","01/16",7);
+
+
+INSERT INTO `Items`(`Seller_Id`, `Item_Name`, `Description`, `Category`, `URL`, 
+		`Reserve_Price`, `Buy_Now_Price`, `Highest_Bid`, `Bidder_Id`, `Start_Auction`, `End_Auction`) 
+	VALUES (1,"Britney Spears\' Plaid Skirt","This is the skirt Britney Spears wore in her \'...Baby One More Time\' Video. Size small. Top not included.","Clothes","www.youtube.com/watch?v=C-u5WLJ9Yk4",
+		60.0,80.0,30.0,4,NOW() - INTERVAL 1 WEEK,NOW() + INTERVAL 1 WEEK);
+
+INSERT INTO `Items`(`Seller_Id`, `Item_Name`, `Description`, `Category`, `URL`, 
+		`Reserve_Price`, `Buy_Now_Price`, `Highest_Bid`, `Start_Auction`, `End_Auction`) 
+	VALUES (1,"Britney Spears\' Leather Whip","This is the whip Britney Spears used in her \'Work Bit*h\' Video. Not recommended for children. Black in color.","Toys","www.youtube.com/watch?v=pt8VYOfr8To",
+		35.0,55.0,10.0,NOW(),NOW() + INTERVAL 2 WEEK);
+		
+INSERT INTO `Items`(`Seller_Id`, `Item_Name`, `Description`, `Category`, `URL`, 
+		`Reserve_Price`, `Buy_Now_Price`, `Highest_Bid`, `Start_Auction`, `End_Auction`) 
+	VALUES (2,"Britney Spears\' \"Heart to Heart\"","In Britney Spears\' \"Heart to Heart\", Britney and Lynne share the inspiring story of how one little girl from Kentwood, Louisiana, turned into a music phenomenon. From the days of singing at talent shows and family gatherings to recording \". . . Baby One More Time\" and performing with *NSYNC, Britney and Lynne share intimate details about Britney\'s rise to stardom. But this book is much more than just the story of Britney\'s life. In their own words, Lynne and Britney talk openly about the challenges facing all mothers and daughters. How do you encourage your child? How do you talk to your mom? How do you overcome obstacles? How do you put together your own \"dream team\" that will always be there for you? How do you deal with success--and failure? How do you talk about dating and relationships, dress codes, self-esteem, and body image?",
+		"Nonfiction","http://www.amazon.com/Britney-Spears-Heart/dp/0609807013", 10.0,20.0,5.0,NOW(),NOW() + INTERVAL 2 WEEK);
+
+INSERT INTO `Items`(`Seller_Id`, `Item_Name`, `Description`, `Category`, `URL`, 
+		`Reserve_Price`, `Buy_Now_Price`, `Highest_Bid`, `Start_Auction`, `End_Auction`) 
+	VALUES (2,"Britney\'s Dance Beat","Now you can dance along to Britney\'s biggest hits in Britney\'s Dance Beat for PlayStation 2. Britney Spears is about to launch her next concert tour and she needs backup dancers. Game includes exclusive interactive video footage and concert performances. Game and Beat Pad sold separately. Made in USA.","Video Games","http://www.amazon.com/Britneys-Dance-Beat-Playstation-2/dp/B00005V3FA",
+		25.0,35.0,10.0,NOW(),NOW() + INTERVAL 2 WEEK);
+
+INSERT INTO `Items`(`Seller_Id`, `Item_Name`, `Description`, `Category`, `URL`, 
+		`Reserve_Price`, `Buy_Now_Price`, `Highest_Bid`, `Start_Auction`, `End_Auction`) 
+	VALUES (2,"Britney Spears Doll","Live in concert Britney doll. Collectors edition. Includes laptop, headset, phone, feather boa and body art. Comes with leather blue fringe outfit. Regular barbie size.","Dolls","www.ebay.com/bhp/britney-spears-doll",
+		96.0,135.0,96.0,NOW(),NOW() + INTERVAL 2 WEEK);
+
+INSERT INTO `Items`(`Seller_Id`, `Item_Name`, `Description`, `Category`, `URL`, 
+		`Reserve_Price`, `Buy_Now_Price`, `Highest_Bid`, `Start_Auction`, `End_Auction`) 
+	VALUES (6,"Britney Spears Hemp Bracelet","This site appears to only sell Britney Spears items for hefty prices. So I handmade a bracelet that spells her name in white acrylic letter beads. Adjustable and Unisex. Do not leave unsupervised with children under 36 months due to small parts. ONLY SERIOUS OFFERS PLZ.","Beaded Bracelets","http://www.amazon.co.uk/HH-Jewellery-Handmade-Adjustable-Friendship/dp/B00I0BC9PK",
+		10.0,15.0,5.0,NOW(),NOW() + INTERVAL 2 WEEK);
+		
+INSERT INTO `Items`(`Seller_Id`, `Item_Name`, `Description`, `Category`, `URL`, 
+		`Reserve_Price`, `Buy_Now_Price`, `Highest_Bid`, `Start_Auction`, `End_Auction`) 
+	VALUES (1,"FAME: Britney Spears","A biographic of Miss Britney Spears in all her illustrated glory.","Comic Books","www.amazon.com/FAME-Britney-Spears.../145074432X",
+		30.0,45.0,20.0,NOW(),NOW() + INTERVAL 2 WEEK);
+		
+INSERT INTO `Items`(`Seller_Id`, `Item_Name`, `Description`, `Category`, `URL`, 
+		`Reserve_Price`, `Buy_Now_Price`, `Highest_Bid`, `Start_Auction`, `End_Auction`) 
+	VALUES (2,"Britney Spears Necklace","Premium Celluloid Guitar Pick Necklace. This would make an amazing gift or just as a treat for yourself. Manufactured from premium grade celluloid these picks sound as good as they look.","Necklaces","http://www.amazon.com/Britney-Spears-Premium-Celluloid-Necklace/dp/B00D5EVA3O",
+		9.0,13.0,5.0,NOW(),NOW() + INTERVAL 2 WEEK);
+		
+INSERT INTO `Items`(`Seller_Id`, `Item_Name`, `Description`, `Category`, 
+		`Reserve_Price`, `Buy_Now_Price`, `Highest_Bid`, `Start_Auction`, `End_Auction`) 
+	VALUES (2,"Jean Shorts","I STOLE THESE FROM BRITNEY SPEARS' CLOSET!!!!!","Shorts",
+		50.0,70.0,30.0,NOW(),NOW() + INTERVAL 2 WEEK);
+		
+INSERT INTO `Items`(`Seller_Id`, `Item_Name`, `Description`, `Category`, 
+		`Reserve_Price`, `Buy_Now_Price`, `Highest_Bid`, `Start_Auction`, `End_Auction`) 
+	VALUES (5,"User 1 and 2s Address","Highest bidder gets their address. Make them stop posting Britney Spears things. I BEG YOU.","Miscellaneous",
+		5.0,10.0,5.0,NOW(),NOW() + INTERVAL 2 WEEK);
+		
+INSERT INTO `Items`(`Seller_Id`, `Item_Name`, `Description`, `Category`,
+		`Reserve_Price`, `Buy_Now_Price`, `Highest_Bid`, `Bidder_Id`, `Start_Auction`, `End_Auction`) 
+	VALUES (3,"Britney Spears Gum","She chewed this. She may have blown some bubbles too.","Miscellaneous",
+		30.0,500.0,340.0,2,NOW() - INTERVAL 3 WEEK,NOW() - INTERVAL 1 WEEK);
+
+INSERT INTO `Order_History`(`User_Id`, `Item_No`, `Card_No`, `Order_Date`) 
+	VALUES (2,11,4929836896378277,NOW() - INTERVAL 8 DAY);
+
+INSERT INTO `Ratings`(`Being_Rated`, `Giving_Rating`, `Rating`, `Rater_Comment`) 
+	VALUES (3,2,10.0,"THANK YOU! THANK YOU! THANK YOU! How did you get this gum! You are amazing! It was still soft when it arrived!");
+
