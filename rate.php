@@ -6,15 +6,19 @@
 		echo "Failed to connect to MySQL: " . mysqli_connect_error();
 	}
 
-	if (count($_GET) > 0) {
-		$userid = $_GET["userid"];
-	}
-	else {
-		$userid = -1;
-	}
+	echo "<h1> Rate User </h1>";
 
-	echo $_POST["rating"];
-	$comment = $_POST["comment"];
+	if (isset($_POST['submit'])) {
+		$rating = $_POST['rating'];
+		$comment = $_POST['comment'];
+		$submit = $_POST['submit'];
 
-	echo $comment;
+		if(isset($submit) && !empty($rating) && !empty($comment)) {
+			// Do some query shit
+		}
+		else {
+			echo "Please fill in all fields."
+		}
+	}
+	
 ?>
