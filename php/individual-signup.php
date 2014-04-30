@@ -21,7 +21,7 @@ $city = $_POST["city"];
 $zip = $_POST["zip"];
 $state = $_POST["state"];
 
-$cc_num = $_POST["cc_num"];
+$cc_num = $_POST["cc_no"];
 $cc_type = $_POST["cc_type"];
 $exp_date1 = $_POST["exp_date1"];
 $exp_date2 = $_POST["exp_date2"];
