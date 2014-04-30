@@ -19,49 +19,20 @@
 			<!--Header Section-->
 			<div id="header" data-role="header" data-theme="a">
 				<div id="header_logo">
-				<a href="../categories-select.php" data-ajax="false" data-prefetch
+				<a href="toys.php" data-ajax="false" data-prefetch
 						data-role="button" id="homebtn" class="home_button">Back</a>
 				</div>
 				<div id="header_home">
 					<a href="../index.html" data-ajax="false" data-prefetch
 						data-role="button" id="homebtn" class="home_button">Home</a>
 				</div>				
-			</div>		
+			</div>			
 			<!-- End of Header Section -->
 			<!--Page Title-->
 			<div id="headerFill" class="dynamic_text">
-				<h2	class="header_text">All Items</h2>
+				<h2	class="header_text">Dolls</h2>
 			</div>
 			<!--End of Page Title-->
-
-			<!--Get shit-->
-
-			<?php
-				$con=mysqli_connect("127.0.0.1","loops","password","infiniteloops");
-			
-				if (mysqli_connect_errno())
-				{
-					echo "Failed to connect to MySQL: " . mysqli_connect_error();
-				}
-
-				$result = mysqli_query($con,"SELECT * FROM `Items`");
-
-				if ($result && mysqli_num_rows($result) > 0) {
-					while($row = mysqli_fetch_array($result)){
-						echo "<div id=\"nav\" class=\"dynamic_size\">
-							<h3 class=\"dynamic_text\"></h3>
-							<div id=\"list\">
-								<ul class=\"dynamic\" data-role=\"listview\" data-inset=\"true\" data-theme=\"a\">
-									<li><a href=\"itemPage.php?itemId=" . $row["Item_No"] . "\" rel=\"external\">" . $row['Item_Name'] . "</a></li>
-								</ul>
-							</div>
-						</div>";
-					}
-				}
-				else {
-					echo "<h1>Sorry, no items exist.</h1>";
-				}
-			?>
 		</div>
 	</body>
 </html>
