@@ -50,7 +50,7 @@
 							<div id=\"list\">
 							<ul class=\"dynamic\" data-role=\"listview\" data-inset=\"true\" data-theme=\"a\">";
 					while($row = mysqli_fetch_array($result)){
-						echo "<li><a href=\"../itemPage.php?itemId=" . $row["Item_No"] . "\" rel=\"external\">" . $row['Item_Name'] . "</a></li>";
+						echo "<li><a href=\"itemPage.php?itemId=" . $row["Item_No"] . "\" rel=\"external\">" . $row['Item_Name'] . "</a></li>";
 					}
 					echo "</ul></div></div>";
 				}
