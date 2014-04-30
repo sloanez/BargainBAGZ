@@ -58,8 +58,12 @@
 					// Item Name
 					echo "<h1>" . $row['Item_Name'] . "</h1>";
 					
+					$seller = $row['Seller_Id'];
 					// Seller: MAKE IT A LINK
-					echo "Seller ID: <a href=\"index.html\">" . $row['Seller_Id'] . "</a>";
+
+					$username = mysqli_query($con, "SELECT User_Name FROM `Individuals` WHERE User_Id = $seller");
+					$userRow = mysqli_fetch_array($username);
+					echo "Seller: <a href=\"user.php?userid=" . $seller . "\">" . $userRow['User_Name'] . "</a>";
 
 
 					// Item Description 
@@ -70,8 +74,6 @@
 					}
 					
 					// Shipped From State
-					$seller = $row['Seller_Id'];
-					
 					$state = mysqli_query($con,"SELECT * FROM `Address` WHERE User_Id = $seller");
 
 					$newRow = mysqli_fetch_array($state);

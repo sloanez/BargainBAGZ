@@ -65,7 +65,7 @@
 						</div>";
 				}
 				else {
-					echo "<h1>Sorry, this item does not exist</h1>";
+					echo "<h1>Sorry, no items for your search exists.</h1>";
 				}
 			?>
 
