@@ -35,7 +35,7 @@
 			</div>
 		<!--End of Page Title-->
 
-		<form action="php/rate.php" method="post">
+		<form action="rate.php" method="POST">
 		Rating (out of 10): <select name="rating">
 								<option value=1>1</option>
 								<option value=1>2</option>
@@ -49,7 +49,7 @@
 								<option value=1>10</option>
 								</select>
 
-		Comment: <input type="text" name="name"><br>
+		Comment: <input type="text" name="comment"><br>
 
 		<input type="submit" value="Submit"> 
 		</form>

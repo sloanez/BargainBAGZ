@@ -63,13 +63,12 @@
 							$name = $individual['User_Name'];
 						}
 						else {
-							$name = "Unidentified User";
+							$name = "User ID: " . $userid;
 						}
 						// Name of User
 						echo "<h1>" . $name;
-						if ($user['Num_Sales'] > 100) {
+						if ($user['Num_Sales'] > 10) {
 							echo "<img src=\"images/super_seller.png\"></h1>";
-							echo " This user is a Super Seller!";
 						}
 						else {
 							echo "</h1>";
@@ -78,6 +77,10 @@
 						// Reputation
 						echo "<br><b>Reputation</b>: " . $user['Reputation'] . " out of 10.";
 
+						// Number of sales
+						echo "<br><br><b>Number of Sales</b>: " . $user['Num_Sales'];
+
+						// Rating and Comments
 						$rating = mysqli_query($con,"SELECT * FROM `Ratings` WHERE Being_Rated = $userid");
 
 						if ($rating && mysqli_num_rows($rating) > 0) {
@@ -97,6 +100,7 @@
 						$items = mysqli_query($con,"SELECT * FROM `Items` WHERE Seller_Id = $userid");
 
 						if ($items && mysqli_num_rows($items) > 0) {
+							echo "<hr>";
 							echo "<h2>Current items " . $name . " is auctioning:</h2>";
 							echo "<div id=\"nav\" class=\"dynamic_size\">
 									<h3 class=\"dynamic_text\"></h3>
@@ -110,22 +114,22 @@
 					}
 
 				}
+				echo "<br><br><hr>";
+				echo "<b><h2>Rate this User:</h2></b><br><form action=\"php/rate.php?userid=" . $userid . "\" method=\"post\">
+					Rating (out of 10): <select name=\"rating\">
+										<option value=1>1</option>
+										<option value=1>2</option>
+										<option value=1>3</option>
+										<option value=1>4</option>
+										<option value=1>5</option>
+										<option value=1>6</option>
+										<option value=1>7</option>
+										<option value=1>8</option>
+										<option value=1>9</option>
+										<option value=1>10</option>
+										</select>
 
-				echo "<form action=\"php/rate.php\" method=\"POST\">
-					Rating (out of 10): <select name="rating">
-											<option value=1>1</option>
-											<option value=1>2</option>
-											<option value=1>3</option>
-											<option value=1>4</option>
-											<option value=1>5</option>
-											<option value=1>6</option>
-											<option value=1>7</option>
-											<option value=1>8</option>
-											<option value=1>9</option>
-											<option value=1>10</option>
-											</select>
-
-				Comment: <input type=\"text\" name=\"name\"><br>
+				Comment: <input type=\"text\" name=\"comment\"><br>
 
 				<input type=\"submit\" value=\"Submit\"> 
 				</form>";
