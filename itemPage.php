@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 <title>Item Listing</title>
@@ -33,6 +34,7 @@
 		<!-- Start Item Listing-->
 		<?php
 			$con=mysqli_connect("127.0.0.1","loops","password","infiniteloops");
+			
 			if (mysqli_connect_errno())
 			{
 				echo "Failed to connect to MySQL: " . mysqli_connect_error();
@@ -49,11 +51,35 @@
 					echo "<h3><i>" . $row['Description'] . "</i></h3>";
 					// For more info: description (if url exists)
 					// Shipped From: GET FROM ADDR OF SELLER ID IN addresstable
-					echo "<b>Current Price</b>: $" . $row['Highest_Bid'] . "<br><br>";
-					// Count Down Clock
-					echo "<b>Buy It Now Price</b>: $" .  $row['Buy_Now_Price'] . "<form name=\"buyNow\" method=\"post\" action=\"buynow.php\">
+					echo "<br><br><b>Highest Bid</b>: $" . $row['Highest_Bid'];
+
+					$end = strtotime($row['End_Auction']);
+
+					$today = time();
+
+					echo "<br><br>" . $end;
+					echo "<br><br>" . $today;
+
+					$diff = $end - $today;
+
+					$timeLeft = date('d-s');
+
+					//echo "<br><br>" . $timeLeft;
+
+					echo "<br><br><b>Time left until end of auction</b>: " . $timeLeft;
+
+
+
+					echo "<br><br><b>Buy It Now Price</b>: $" .  $row['Buy_Now_Price'] . "<form name=\"buyNow\" method=\"post\" action=\"buynow.php\">
 					<input type=\"submit\" value=\"Buy It Now!\">
 					</form>";
+
+					$nextBid = ($row['Highest_Bid'] * .05) + $row['Highest_Bid'];
+
+					echo "<br><br><form name=\"bid\" method=\"post\" action=\"bid.php\">
+							<b>Bid</b> (Must be at least: $" . $nextBid . "):<input name=\"bidAmount\" type=\"text\">
+							<input type=\"submit\" value=\"Submit\">
+						</form>";
 				}
 			}	
 			else {	
@@ -61,11 +87,6 @@
 			 }
 		?>
 		<br><br>
-		<form name="bid" method="post" action="bid.php">
-			<b>Bid</b>: <input name="bidAmount" type="text">
-			<input type="submit" value="Submit">
-		</form>
-		
 		</div>
 	</body>
 </html>
