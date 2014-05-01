@@ -6,6 +6,7 @@
 		echo "Failed to connect to MySQL: " . mysqli_connect_error();
 	}
 
+	$company_name = $_POST["company-name"];
 	$password = $_POST["password"];
 	$company_type = $_POST["company-type"];
 	$f_name = $_POST["fname"];
@@ -29,10 +30,10 @@
 	$user_id = $user_obj['User_Id'];
 	echo mysqli_error($con);
 
-	$result2 = mysqli_query($con,"INSERT Into Companies (User_Id, Category, Revenue, POC_Name, POC_Email) Values ('$user_id', '$company_type', '$revenue', '$poc_name', '$poc_email')");
+	$result2 = mysqli_query($con,"INSERT Into Companies (User_Id, User_Name, Category, Revenue, POC_Name, POC_Email) Values ('$user_id', '$company_name','$company_type', '$revenue', '$poc_name', '$poc_email')");
 	echo mysqli_error($con);
 	$result3 = mysqli_query($con,"INSERT Into Address (Street,House_Num,City,Stayt,ZIP,User_Id) Values ('$street', '$house_num', '$city', '$state', '$zip', '$user_id')");
 	echo mysqli_error($con);
 
-
+	header('Location: successful-signup.html');
 ?>
