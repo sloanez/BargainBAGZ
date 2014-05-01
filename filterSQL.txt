@@ -1,0 +1,17 @@
+
+delete from `Items`
+where `End_Auction` < NOW() and (`Bidder_Id` = NULL or `Highest_Bid` < `Reserve_Price`)
+
+        
+SELECT it.`Item_Num`, it.`Bidder_Id`, c.`Card_No`, it.`End_Auction`
+FROM Items it, `Credit_Card` c
+WHERE it.`Item_Num` NOT IN (SELECT `Item_Num` FROM Order_History) AND
+        `End_Auction` < NOW() AND
+        it.`Bidder_Id` c.`User_ID`
+
+
+#loop through results lines
+INSERT INTO `Order_History`(`User_Id`, `Item_No`, `Card_No`, `Order_Date`) 
+	VALUES #result line
+
+    
