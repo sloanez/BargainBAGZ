@@ -11,9 +11,12 @@
 	$company_type = $_POST["company-type"];
 	$f_name = $_POST["fname"];
 	$l_name = $_POST["lname"];
+	$poc_name = $f_name." ".$l_name;
 	$poc_email = $_POST["POC-email"];
 	$gender = $_POST["gender"];
 	$phone = $_POST["phone"];
+	$house_num = $_POST["house_num"];
+	$street = $_POST["street"];
 	$city = $_POST["city"];
 	$zip = $_POST["zip"];
 	$state = $_POST["state"];
@@ -28,11 +31,9 @@
 	$user_id = $user_obj['User_Id'];
 	echo mysqli_error($con);
 
-	$result2 = mysqli_query($con,"INSERT Into Individuals (User_Id, Annual_Income, Age, Male, Email) Values ('$user_id', '$income', '$age', '$gender', '$email')");
+	$result2 = mysqli_query($con,"INSERT Into Companies (User_Id, Category, Revenue, POC_Name, POC_Email) Values ('$user_id', '$company_type', '$revenue', '$poc_name', '$poc_email')");
 	echo mysqli_error($con);
 	$result3 = mysqli_query($con,"INSERT Into Address (Street,House_Num,City,Stayt,ZIP,User_Id) Values ('$street', '$house_num', '$city', '$state', '$zip', '$user_id')");
-	echo mysqli_error($con);
-	$result4 = mysqli_query($con,"INSERT Into Credit_Card (Card_No,Security_No,Card_Type,Expiration,User_Id) Values ('$cc_num', '$sec_num', '$cc_type', '$exp_date', '$user_id')");
 	echo mysqli_error($con);
 
 
