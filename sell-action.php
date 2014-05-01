@@ -6,20 +6,17 @@ if (mysqli_connect_errno())
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
 
-$email = $_POST["email"];
-$password = $_POST["password"];
-$f_name = $_POST["fname"];
-$l_name = $_POST["lname"];
-$age = $_POST["age"];
-$gender = $_POST["gender"];
-$phone = $_POST["phone"];
-$addr = $_POST["addr_1"]." ".$_POST["addr_2"];
-$city = $_POST["city"];
-$zip = $_POST["zip"];
-$state = $_POST["state"];
+$item_name = $_POST["itemname"];
+$description = $_POST["description"];
+$category = $_POST["category"];
+$url = $_POST["url"];
+$highest_bid = $_POST["startprice"];
+$reserve_price = $_POST["reserveprice"];
+$buy_now_price = $_POST["buyitnow"];
 
+// $seller_id = 
 
-$result = mysqli_query($con,"INSERT Into Users (Email,Password,Phone_Num) Values ('$email', '$password', '$phone')");
+$result = mysqli_query($con,"INSERT Into Items (Seller_Id,Item_Name,Description,Category,URL,Reserve_Price,Buy_Now_Price,Highest_Bid,Start_Auction,End_Auction) Values ('$seller_id', '$item_name', '$description', '$category', '$url', '$reserve_price', '$buy_now_price', '$highest_bid', NOW(), NOW() + INTERVAL 2 WEEK)");
 
 echo mysqli_error($con);
 
