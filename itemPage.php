@@ -25,7 +25,7 @@
 					<a href=data-ajax="false" data-prefetch data-role="button" id="homebtn" class="home_button" onclick="goBack()">BACK</a>
 				</div>
 				<div id="header_home">
-				<a href="index.html" data-ajax="false" data-prefetch data-role="button" id="homebtn" class="home_button">HOME</a>
+				<a href="bagz-home.html" data-ajax="false" data-prefetch data-role="button" id="homebtn" class="home_button">HOME</a>
 				</div>	
 			</div>	
 			<!-- End of Header Section -->
@@ -36,6 +36,14 @@
 		<!--End of Page Title-->
 		<!-- Start Item Listing-->
 		<?php
+
+			session_start();
+
+			if(!isset($_SESSION['logged'])) {
+				header("location: index.html");
+				exit;
+			}
+
 			$con=mysqli_connect("127.0.0.1","loops","password","infiniteloops");
 			
 			if (mysqli_connect_errno())
@@ -102,7 +110,7 @@
 
 
 					// Buy it now
-					echo "<br><br><b>Buy It Now Price</b>: $" .  $row['Buy_Now_Price'] . "<form name=\"buyNow\" method=\"post\" action=\"buynow.php\">
+					echo "<br><br><b>Buy It Now Price</b>: $" . $row['Buy_Now_Price'] . "<form name=\"buyNow\" method=\"post\" action=\"buynow.php\">
 					<input type=\"submit\" value=\"Buy It Now!\">
 					</form>";
 

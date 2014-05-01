@@ -16,29 +16,28 @@
 	</head>
 	<body>	
 		<div id="page_home" class="page" data-role="page">
-			<!--Header Section-->
-			<div id="header" data-role="header" data-theme="a">
-				<div id="header_logo">
-				<a href="choose-login.html" data-ajax="false" data-prefetch
-						data-role="button" id="homebtn" class="home_button">BACK</a>
-				</div>
-				<div id="header_home">
-					<a href="index.html" data-ajax="false" data-prefetch
-						data-role="button" id="homebtn" class="home_button">Home</a>
-				</div>				
-			</div>			
+			
 			<!-- End of Header Section -->
 			<!--Page Title-->
 			<div id="headerFill" class="dynamic_text">
-				<h2	class="header_text">Log In</h2>
+				<h2	class="header_text">Welcome to Bargain BAGZ</h2>
 			</div>
 			<!--End of Page Title-->
-
-			<form action="login-verify.php?company=0" method="post">
-				Email: <input type="text" name="email"><br>
-				Password: <input type="password" name="password"><br>
-				<input type="submit" value="Log In!">
-			</form>
+			<?php
+				session_start();
+			?>
+			<!--Menu Options-->
+			<div id="nav" class="dynamic_size">
+				<h3 class="dynamic_text"></h3>
+				<div id="list">
+					<ul class="dynamic" data-role="listview" data-inset="true" data-theme="a">
+						<li><a href="signup.html" rel="external">Sign Up</a></li>
+						<li><a href="choose-login.html" rel="external">Log In</a></li>
+					</ul>
+				</div>
+			</div>
+			<!--End of Menu Options-->
 		</div>
 	</body>
 </html>
+	

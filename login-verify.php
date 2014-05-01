@@ -20,27 +20,28 @@
 	}
 
 	if($sql1) {
-
 		$user = mysqli_fetch_array($sql1);
-		echo $user;
 		$userid = $user['User_Id'];
 
-		$sql = mysql_query("SELECT * FROM `Users` WHERE 'User_Id' = $userid AND Password = '$password'");
+		$sql = mysqli_query($con,"SELECT * FROM `Users` WHERE User_Id = '$userid' AND Password = '$password'");
 
+		if(mysqli_num_rows($sql) == 1) { 
+	        // Credentials checked, log in...
 
-		if(mysql_num_rows($sql) == 1) { 
-	        echo "LOGGING IN..";
-	        //header("Location: index.html"); // Modify to go to the page you would like 
-	        //exit; 
-	    }else{ 
-	    	echo "noo...";
-	        //header("Location: login.html"); 
-	        //exit; 
-    	}
+	        $add = mysqli_query($con, "INSERT Into Logged_In (User_Id) Values ('$userid')");
+	        //echo mysqli_error($con);
+
+	        header("Location: bagz-home.php");
+	        
+	        exit; 
+		}
+		else {
+			echo "Invalid Username or Password";
+		}
     }
     else {
-    	echo "NO";
-    } 
+    	echo "Invalid Username or Password";
+    }	
 
 ?>
 

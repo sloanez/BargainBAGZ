@@ -35,5 +35,5 @@
 	$result3 = mysqli_query($con,"INSERT Into Address (Street,House_Num,City,Stayt,ZIP,User_Id) Values ('$street', '$house_num', '$city', '$state', '$zip', '$user_id')");
 	echo mysqli_error($con);
 
-	header('Location: successful-signup.html');
+	header('Location: bagz-home.html');
 ?>

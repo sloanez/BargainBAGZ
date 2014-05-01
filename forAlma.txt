@@ -1,3 +1,5 @@
+DELETE FROM `Logged_In` WHERE 1;
+
 DELETE FROM `Users`;
 DELETE FROM `Individuals`;
 DELETE FROM `Companies`;
