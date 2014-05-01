@@ -34,10 +34,10 @@
 			</div>
 			<!--End of Page Title-->
 			<!--Menu Options-->
-			<form action="sell_form.asp">
+			<form action="sell-action.php" method="post">
 				Item Name: <input type="text" name="itemname" maxlength="40"><br>
-				Description: <textarea maxlength="500" name="Description"></textarea><br>
-				Category: <select name="Category"> 
+				Description: <textarea maxlength="500" name="description"></textarea><br>
+				Category: <select name="category"> 
 					<option selected disabled>Select A Category</option>
 					<option value="Miscellaneous">Miscellaneous</option>
 					<option value="Books">Books</option>
@@ -68,23 +68,6 @@
 				
 				<br>
 				<input type="submit" value="Submit">
-
-				<script>
-				  $(function () {
-					$('form').on('submit', function (e) {
-					  $.ajax({
-						type: 'post',
-						url: 'php/sell.php',
-						data: $('form').serialize(),
-						success: function () {
-						  alert('form was submitted');
-						  window.location.href = "index.html";						  
-						}
-					  });
-					  e.preventDefault();
-					});
-				  });
-				</script>
 			</form>
 			<!--End of Menu Options-->
 		</div>

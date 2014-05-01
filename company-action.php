@@ -6,14 +6,12 @@
 		echo "Failed to connect to MySQL: " . mysqli_connect_error();
 	}
 
-	$username = $_POST["username"];
 	$password = $_POST["password"];
 	$company_type = $_POST["company-type"];
 	$f_name = $_POST["fname"];
 	$l_name = $_POST["lname"];
 	$poc_name = $f_name." ".$l_name;
 	$poc_email = $_POST["POC-email"];
-	$gender = $_POST["gender"];
 	$phone = $_POST["phone"];
 	$house_num = $_POST["house_num"];
 	$street = $_POST["street"];
