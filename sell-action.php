@@ -17,7 +17,6 @@ $buy_now_price = $_POST["buyitnow"];
 // $seller_id = 
 
 $result = mysqli_query($con,"INSERT Into Items (Seller_Id,Item_Name,Description,Category,URL,Reserve_Price,Buy_Now_Price,Highest_Bid,Start_Auction,End_Auction) Values ('$seller_id', '$item_name', '$description', '$category', '$url', '$reserve_price', '$buy_now_price', '$highest_bid', NOW(), NOW() + INTERVAL 2 WEEK)");
-
 echo mysqli_error($con);
 
 mysqli_close($con);
