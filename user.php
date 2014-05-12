@@ -90,7 +90,7 @@
 									echo "<a href=\"user.php?userid=" . $rate['Giving_Rating'] . "\">" . "User " . $rate['Giving_Rating'] . "</a> gave a rating of " . $rate['Rating'];
 								}
 								if ($rate['Rater_Comment']) {
-									echo " and said \"<i>" . $rate['Rater_Comment'] . "\".</i>";
+									echo " and said \"<i>" . $rate['Rater_Comment'] . "\".</i><br><br>";
 								}
 							}
 						}
@@ -115,7 +115,7 @@
 
 				}
 				echo "<br><br><hr>";
-				echo "<b><h2>Rate this User:</h2></b><br><form action=\"php/rate.php?userid=" . $userid . "\" method=\"post\">
+				echo "<b><h2>Rate this User:</h2></b><br><form action=\"rate.php?userid=" . $userid . "\" method=\"post\">
 					Rating (out of 10): <select name=\"rating\">
 										<option value=1>1</option>
 										<option value=1>2</option>

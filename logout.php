@@ -6,7 +6,7 @@ $con=mysqli_connect("127.0.0.1","loops","password","infiniteloops");
 		echo "Failed to connect to MySQL: " . mysqli_connect_error();
 	}
 
-$sql = mysqli_query($con,"DELETE FROM `Logged_In` WHERE 1");
+	$sql = mysqli_query($con,"DELETE FROM `Logged_In`");
 
-header("Location: index.html");
+	header("Location: index.php");
 ?>

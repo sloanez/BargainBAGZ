@@ -22,10 +22,10 @@
 				<script>
 					function goBack() {window.history.back ();}
 				</script>
-					<a href=data-ajax="false" data-prefetch data-role="button" id="homebtn" class="home_button" onclick="goBack()">BACK</a>
+					<a href=data-ajax="false" data-prefetch data-role="button" id="homebtn" class="home_button" onclick="goBack()">Back</a>
 				</div>
 				<div id="header_home">
-				<a href="bagz-home.html" data-ajax="false" data-prefetch data-role="button" id="homebtn" class="home_button">HOME</a>
+				<a href="bagz-home.php" data-ajax="false" data-prefetch data-role="button" id="homebtn" class="home_button">Home</a>
 				</div>	
 			</div>	
 			<!-- End of Header Section -->
@@ -37,20 +37,12 @@
 		<!-- Start Item Listing-->
 		<?php
 
-			session_start();
-
-			if(!isset($_SESSION['logged'])) {
-				header("location: index.html");
-				exit;
-			}
-
 			$con=mysqli_connect("127.0.0.1","loops","password","infiniteloops");
 			
 			if (mysqli_connect_errno())
 			{
 				echo "Failed to connect to MySQL: " . mysqli_connect_error();
 			}
-			
 
 			if (count($_GET) > 0) {
 				$itemId = $_GET["itemId"];
@@ -110,7 +102,7 @@
 
 
 					// Buy it now
-					echo "<br><br><b>Buy It Now Price</b>: $" . $row['Buy_Now_Price'] . "<form name=\"buyNow\" method=\"post\" action=\"buynow.php\">
+					echo "<br><br><b>Buy It Now Price</b>: $" . $row['Buy_Now_Price'] . "<form name=\"buyNow\" method=\"post\" action=\"itemPage.php?itemId= " . $itemId . "\">
 					<input type=\"submit\" value=\"Buy It Now!\">
 					</form>";
 
@@ -118,7 +110,7 @@
 					// Bid for item
 					$nextBid = ($row['Highest_Bid'] * .05) + $row['Highest_Bid'];
 
-					echo "<br><br><form name=\"bid\" method=\"post\" action=\"bid.php\">
+					echo "<br><br><form name=\"bid\" method=\"post\" action=\"itemPage.php?itemId= " . $itemId . "\">
 							<b>Bid</b> (Must be at least: $" . $nextBid . "):<input name=\"bidAmount\" type=\"text\">
 							<input type=\"submit\" value=\"Submit\">
 						</form>";

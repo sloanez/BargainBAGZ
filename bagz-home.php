@@ -19,12 +19,13 @@
 			<!--Header Section-->
 			<div id="header" data-role="header" data-theme="a">
 				<div id="header_logo">
-				<a href="signup.html" data-ajax="false" data-prefetch
-						data-role="button" id="homebtn" class="home_button">Sign Up</a>
+				<a href="bagz-home.php" data-ajax="false" data-prefetch
+						data-role="button" id="homebtn" class="home_button">Home</a>
 				</div>
 				<div id="header_home">
-				<a href="logout.php" data-ajax="false" data-prefetch
-						data-role="button" id="homebtn" class="home_button">Log Out</a>
+				<form method="post" action="logout.php">
+				<input type="submit" id="homebtn" class="home_button" value="Log out">
+				</form>
 				</div>				
 			</div>		
 			<!-- End of Header Section -->

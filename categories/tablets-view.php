@@ -23,7 +23,7 @@
 						data-role="button" id="homebtn" class="home_button">BACK</a>
 				</div>
 				<div id="header_home">
-					<a href="../index.html" data-ajax="false" data-prefetch
+					<a href="../bagz-home.php" data-ajax="false" data-prefetch
 						data-role="button" id="homebtn" class="home_button">Home</a>
 				</div>				
 			</div>		
